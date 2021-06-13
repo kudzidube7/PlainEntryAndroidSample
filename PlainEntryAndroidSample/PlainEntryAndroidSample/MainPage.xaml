@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:effects="clr-namespace:PlainEntryAndroidSample.Effects"
+             x:Class="PlainEntryAndroidSample.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Plain android entry" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="BEFORE:" FontSize="Title" Padding="30,10,30,10"/>
+        <Frame Padding="0" Margin="5,0,5,0" CornerRadius="20">
+            <Entry Placeholder="Default Entry"/>
+        </Frame>
+
+        <Label Text="AFTER:" FontSize="Title" Padding="30,10,30,10"/>
+        <Frame Padding="0" Margin="5,0,5,0" CornerRadius="20">
+            <Entry Placeholder="Plain Entry">
+                <Entry.Effects>
+                    <effects:PlainEntry/>
+                </Entry.Effects>
+            </Entry>
+        </Frame>
+
+    </StackLayout>
+</ContentPage>
